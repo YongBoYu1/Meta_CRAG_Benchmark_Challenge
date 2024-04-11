@@ -1,26 +1,14 @@
 import pickle as pkl
-from bs4 import BeautifulSoup as bs
 import os
 from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOutputParser
 from langchain_openai import ChatOpenAI
-from langchain_community.document_loaders import WebBaseLoader, SeleniumURLLoader
+from langchain_community.document_loaders import  SeleniumURLLoader
 from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.chains.combine_documents import create_stuff_documents_chain
-from langchain_core.documents import Document
 from langchain.chains import create_retrieval_chain
-from langchain.chains import create_history_aware_retriever
-from langchain_core.prompts import MessagesPlaceholder
-from langchain_core.messages import HumanMessage, AIMessage
-from langchain.tools.retriever import create_retriever_tool
-from langchain_community.tools.tavily_search import TavilySearchResults
-from langchain import hub
-from langchain.agents import create_openai_functions_agent
-from langchain.agents import AgentExecutor
-from langchain.prompts import PromptTemplate
 
 # Load the .env file which contains the API keys
 load_dotenv()
