@@ -1,0 +1,1 @@
+https://www.aicrowd.com/challenges/meta-comprehensive-rag-benchmark-kdd-cup-2024/problems/meta-kdd-cup-24-crag-retrieval-summarization/dataset_files
